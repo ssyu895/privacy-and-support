@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - CostKeeper</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.8;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Language Switch Button */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid rgba(74, 111, 165, 0.3);
+      background: rgba(74, 111, 165, 0.1);
+      color: #4a6fa5;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .lang-btn:hover {
+      background: rgba(74, 111, 165, 0.2);
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      color: #1d1d1f;
+    }
+
+    .app-name {
+      text-align: center;
+      color: #86868b;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      padding-left: 16px;
+      border-left: 4px solid #4a6fa5;
+    }
+
+    .section-content {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #515154;
+      text-align: justify;
+      padding-left: 16px;
+    }
+
+    .contact-card {
+      margin-top: 16px;
+      padding: 24px;
+      background: rgba(74, 111, 165, 0.08);
+      border-radius: 12px;
+      border: 1px solid rgba(74, 111, 165, 0.15);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #515154;
+      margin: 12px 0;
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      color: #4a6fa5;
+    }
+
+    .faq-item {
+      margin-bottom: 24px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-question {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin-bottom: 12px;
+    }
+
+    .faq-answer {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #515154;
+    }
+
+    .feature-list {
+      margin: 16px 0;
+      padding-left: 36px;
+    }
+
+    .feature-list li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #515154;
+      margin: 8px 0;
+    }
+
+    .last-update {
+      font-size: 14px;
+      color: #86868b;
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* Language display control */
+    .lang-zh {
+      display: none;
+    }
+
+    .lang-en {
+      display: block;
+    }
+
+    body.zh-mode .lang-zh {
+      display: block;
+    }
+
+    body.zh-mode .lang-en {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      .lang-switch {
+        top: 12px;
+        right: 12px;
+      }
+
+      .lang-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+
+      .section-content,
+      .faq-answer,
+      .feature-list li {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">中文</button>
+  </div>
+
+  <div class="container">
+    <!-- English Version -->
+    <div class="lang-en">
+      <h1>Technical Support</h1>
+      <p class="app-name">CostKeeper</p>
+
+      <div class="section">
+        <div class="section-title">Contact Us</div>
+        <div class="section-content">
+          If you encounter any issues or have questions while using CostKeeper, our support team is here to help. Please feel free to contact us through the following methods:
+        </div>
+        <div class="contact-card">
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Email: ssyu8950210@163.com
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+            Response Time: Within 24-48 hours
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">App Features</div>
+        <div class="section-content">
+          CostKeeper helps you track your purchases and calculate their daily value. Key features include:
+        </div>
+        <ul class="feature-list">
+          <li>Track items with name, price, category, and purchase date</li>
+          <li>Calculate daily value based on usage duration</li>
+          <li>Set expiration dates for items and receive reminders</li>
+          <li>Categorize items with custom icons and colors</li>
+          <li>View spending statistics and category distribution</li>
+          <li>Add photos to your items for better organization</li>
+          <li>All data stored locally for privacy and security</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Frequently Asked Questions</div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Will my data be synced across devices?</div>
+          <div class="faq-answer">
+            A: Currently, CostKeeper uses local storage only. Your data is stored on your device and does not sync automatically. We recommend backing up important data regularly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: What happens if I uninstall the App?</div>
+          <div class="faq-answer">
+            A: All your data will be lost if you uninstall the App. Please make sure to export or back up any important information before uninstalling.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: How do I add photos to my items?</div>
+          <div class="faq-answer">
+            A: When adding or editing an item, tap the image area to either take a new photo or select one from your photo library. The photo will be stored locally on your device.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Can I change the category of an item after creation?</div>
+          <div class="faq-answer">
+            A: Yes, you can edit any item including its category, name, price, and other details at any time by tapping on the item in your list.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Does CostKeeper collect any personal data?</div>
+          <div class="faq-answer">
+            A: No, CostKeeper does not collect any personal data. All your information is stored locally on your device and is never transmitted to our servers or third parties.
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Before Contacting Support</div>
+        <div class="section-content">
+          To help us assist you better, please include the following information when contacting us:
+        </div>
+        <ul class="feature-list">
+          <li>Your device model and iOS version</li>
+          <li>CostKeeper App version</li>
+          <li>A detailed description of the issue</li>
+          <li>Screenshots or screen recordings (if applicable)</li>
+          <li>Steps to reproduce the problem</li>
+        </ul>
+      </div>
+
+      <div class="last-update">
+        CostKeeper - Your Personal Expense Tracker
+      </div>
+    </div>
+
+    <!-- Chinese Version -->
+    <div class="lang-zh">
+      <h1>技术支持</h1>
+      <p class="app-name">CostKeeper（析物记账）</p>
+
+      <div class="section">
+        <div class="section-title">联系我们</div>
+        <div class="section-content">
+          如果您在使用 CostKeeper 过程中遇到任何问题或有疑问，我们的支持团队随时为您提供帮助。请通过以下方式联系我们：
+        </div>
+        <div class="contact-card">
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            邮箱：ssyu8950210@163.com
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+            响应时间：24-48 小时内
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">应用功能</div>
+        <div class="section-content">
+          CostKeeper 帮助您记录消费并计算物品的日均价值。主要功能包括：
+        </div>
+        <ul class="feature-list">
+          <li>记录物品名称、价格、分类和购买日期</li>
+          <li>根据使用时长计算日均价值</li>
+          <li>设置物品到期日期并接收提醒</li>
+          <li>使用自定义图标和颜色对物品进行分类</li>
+          <li>查看消费统计和分类分布</li>
+          <li>为物品添加照片以便更好地管理</li>
+          <li>所有数据本地存储，保护隐私安全</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">常见问题解答</div>
+
+        <div class="faq-item">
+          <div class="faq-question">问：我的数据会在设备之间同步吗？</div>
+          <div class="faq-answer">
+            答：目前，CostKeeper 仅使用本地存储。您的数据存储在您的设备上，不会自动同步。建议您定期备份重要数据。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">问：如果卸载应用会发生什么？</div>
+          <div class="faq-answer">
+            答：如果您卸载应用，所有数据将会丢失。请确保在卸载前导出或备份任何重要信息。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">问：如何为物品添加照片？</div>
+          <div class="faq-answer">
+            答：在添加或编辑物品时，点击图片区域可以选择拍摄新照片或从相册中选择。照片将存储在您设备的本地。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">问：创建物品后可以更改分类吗？</div>
+          <div class="faq-answer">
+            答：可以，您可以随时编辑任何物品，包括其分类、名称、价格和其他详情，只需在列表中点击该物品即可。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">问：CostKeeper 会收集个人数据吗？</div>
+          <div class="faq-answer">
+            答：不会，CostKeeper 不收集任何个人数据。您的所有信息都存储在您的设备本地，永远不会传输到我们的服务器或第三方。
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">联系支持前</div>
+        <div class="section-content">
+          为了更好地帮助您，请在联系我们时提供以下信息：
+        </div>
+        <ul class="feature-list">
+          <li>您的设备型号和 iOS 版本</li>
+          <li>CostKeeper 应用版本</li>
+          <li>问题的详细描述</li>
+          <li>截图或录屏（如适用）</li>
+          <li>重现问题的步骤</li>
+        </ul>
+      </div>
+
+      <div class="last-update">
+        CostKeeper - 您的个人消费记账助手
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleLanguage() {
+      var body = document.body;
+      var langBtn = document.getElementById('langBtn');
+
+      if (body.classList.contains('zh-mode')) {
+        body.classList.remove('zh-mode');
+        langBtn.textContent = '中文';
+        document.documentElement.lang = 'en';
+      } else {
+        body.classList.add('zh-mode');
+        langBtn.textContent = 'EN';
+        document.documentElement.lang = 'zh-CN';
+      }
+    }
+  </script>
+</body>
+</html>
