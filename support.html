@@ -25,7 +25,7 @@
       margin: 0 auto;
     }
 
-    /* Language Switch Button */
+    /* Language Switch Dropdown */
     .lang-switch {
       position: fixed;
       top: 20px;
@@ -33,26 +33,23 @@
       z-index: 1000;
     }
 
-    .lang-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .lang-select {
+      padding: 8px 16px;
       border: 1px solid rgba(74, 111, 165, 0.3);
-      background: rgba(74, 111, 165, 0.1);
-      color: #4a6fa5;
+      background: rgba(255, 255, 255, 0.8);
+      color: #1d1d1f;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      outline: none;
     }
 
-    .lang-btn:hover {
-      background: rgba(74, 111, 165, 0.2);
-      transform: scale(1.05);
+    .lang-select:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(74, 111, 165, 0.5);
     }
 
     h1 {
@@ -184,10 +181,9 @@
         right: 12px;
       }
 
-      .lang-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 12px;
+      .lang-select {
+        padding: 6px 12px;
+        font-size: 13px;
       }
 
       h1 {
@@ -208,7 +204,10 @@
 </head>
 <body>
   <div class="lang-switch">
-    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">中文</button>
+    <select class="lang-select" onchange="changeLanguage(this.value)" id="langSelect">
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+    </select>
   </div>
 
   <div class="container">
@@ -246,8 +245,7 @@
         <ul class="feature-list">
           <li>Track items with name, price, category, and purchase date</li>
           <li>Calculate daily value based on usage duration</li>
-          <li>Set expiration dates for items and receive reminders</li>
-          <li>Categorize items with custom icons and colors</li>
+          <li>Set expiration dates for items</li>
           <li>View spending statistics and category distribution</li>
           <li>Add photos to your items for better organization</li>
           <li>All data stored locally for privacy and security</li>
@@ -260,14 +258,14 @@
         <div class="faq-item">
           <div class="faq-question">Q: Will my data be synced across devices?</div>
           <div class="faq-answer">
-            A: Currently, CostKeeper uses local storage only. Your data is stored on your device and does not sync automatically. We recommend backing up important data regularly.
+            A: Currently, CostKeeper uses local storage only. Your data is stored on your device and does not sync automatically.
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">Q: What happens if I uninstall the App?</div>
           <div class="faq-answer">
-            A: All your data will be lost if you uninstall the App. Please make sure to export or back up any important information before uninstalling.
+            A: All your data will be lost if you uninstall the App. Please make sure to back up any important information before uninstalling.
           </div>
         </div>
 
@@ -346,8 +344,7 @@
         <ul class="feature-list">
           <li>记录物品名称、价格、分类和购买日期</li>
           <li>根据使用时长计算日均价值</li>
-          <li>设置物品到期日期并接收提醒</li>
-          <li>使用自定义图标和颜色对物品进行分类</li>
+          <li>设置物品到期日期</li>
           <li>查看消费统计和分类分布</li>
           <li>为物品添加照片以便更好地管理</li>
           <li>所有数据本地存储，保护隐私安全</li>
@@ -360,14 +357,14 @@
         <div class="faq-item">
           <div class="faq-question">问：我的数据会在设备之间同步吗？</div>
           <div class="faq-answer">
-            答：目前，CostKeeper 仅使用本地存储。您的数据存储在您的设备上，不会自动同步。建议您定期备份重要数据。
+            答：目前，CostKeeper 仅使用本地存储。您的数据存储在您的设备上，不会自动同步。
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">问：如果卸载应用会发生什么？</div>
           <div class="faq-answer">
-            答：如果您卸载应用，所有数据将会丢失。请确保在卸载前导出或备份任何重要信息。
+            答：如果您卸载应用，所有数据将会丢失。请确保在卸载前备份任何重要信息。
           </div>
         </div>
 
@@ -414,18 +411,15 @@
   </div>
 
   <script>
-    function toggleLanguage() {
+    function changeLanguage(lang) {
       var body = document.body;
-      var langBtn = document.getElementById('langBtn');
 
-      if (body.classList.contains('zh-mode')) {
-        body.classList.remove('zh-mode');
-        langBtn.textContent = '中文';
-        document.documentElement.lang = 'en';
-      } else {
+      if (lang === 'zh') {
         body.classList.add('zh-mode');
-        langBtn.textContent = 'EN';
         document.documentElement.lang = 'zh-CN';
+      } else {
+        body.classList.remove('zh-mode');
+        document.documentElement.lang = 'en';
       }
     }
   </script>
