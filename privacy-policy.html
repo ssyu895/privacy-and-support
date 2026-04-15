@@ -25,7 +25,7 @@
       margin: 0 auto;
     }
 
-    /* Language Switch Button */
+    /* Language Switch Dropdown */
     .lang-switch {
       position: fixed;
       top: 20px;
@@ -33,26 +33,23 @@
       z-index: 1000;
     }
 
-    .lang-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .lang-select {
+      padding: 8px 16px;
       border: 1px solid rgba(74, 111, 165, 0.3);
-      background: rgba(74, 111, 165, 0.1);
-      color: #4a6fa5;
+      background: rgba(255, 255, 255, 0.8);
+      color: #1d1d1f;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      outline: none;
     }
 
-    .lang-btn:hover {
-      background: rgba(74, 111, 165, 0.2);
-      transform: scale(1.05);
+    .lang-select:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(74, 111, 165, 0.5);
     }
 
     h1 {
@@ -178,10 +175,9 @@
         right: 12px;
       }
 
-      .lang-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 12px;
+      .lang-select {
+        padding: 6px 12px;
+        font-size: 13px;
       }
 
       h1 {
@@ -202,7 +198,10 @@
 </head>
 <body>
   <div class="lang-switch">
-    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">中文</button>
+    <select class="lang-select" onchange="changeLanguage(this.value)" id="langSelect">
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+    </select>
   </div>
 
   <div class="container">
@@ -268,7 +267,7 @@
 
         <div class="subsection">4.1 Data Storage Location</div>
         <div class="subsection-content">
-          All your data is stored in your device's local storage (using uni-app's storage mechanism).
+          All your data is stored in your device's local storage.
         </div>
 
         <div class="subsection">4.2 Data Security Responsibility</div>
@@ -280,9 +279,6 @@
           <li>Clearing App cache will result in data loss</li>
           <li>Data will not automatically sync when changing devices</li>
         </ul>
-        <div class="subsection-content" style="margin-top: 12px;">
-          We recommend that you regularly back up important data.
-        </div>
       </div>
 
       <div class="section">
@@ -403,7 +399,7 @@
 
         <div class="subsection">1. 数据存储位置</div>
         <div class="subsection-content">
-          您的所有数据均存储在您设备的本地存储空间中（使用 uni-app 的 storage 机制）。
+          您的所有数据均存储在您设备的本地存储空间中。
         </div>
 
         <div class="subsection">2. 数据安全责任</div>
@@ -415,9 +411,6 @@
           <li>清除应用缓存将导致数据丢失</li>
           <li>更换设备时数据不会自动同步</li>
         </ul>
-        <div class="subsection-content" style="margin-top: 12px;">
-          建议您定期备份重要数据。
-        </div>
       </div>
 
       <div class="section">
@@ -478,18 +471,15 @@
   </div>
 
   <script>
-    function toggleLanguage() {
+    function changeLanguage(lang) {
       var body = document.body;
-      var langBtn = document.getElementById('langBtn');
 
-      if (body.classList.contains('zh-mode')) {
-        body.classList.remove('zh-mode');
-        langBtn.textContent = '中文';
-        document.documentElement.lang = 'en';
-      } else {
+      if (lang === 'zh') {
         body.classList.add('zh-mode');
-        langBtn.textContent = 'EN';
         document.documentElement.lang = 'zh-CN';
+      } else {
+        body.classList.remove('zh-mode');
+        document.documentElement.lang = 'en';
       }
     }
   </script>
