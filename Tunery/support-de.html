@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technischer Support - Tunery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      color: #c8c8d4;
+      background: linear-gradient(160deg, #0a0a0f 0%, #12121a 50%, #1a1a2e 100%);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; background: rgba(18, 18, 26, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    h1 { font-size: 28px; color: #ffffff; margin-bottom: 8px; text-align: center; }
+    h1::after { content: ''; display: block; width: 60px; height: 3px; background: #00ff88; border-radius: 2px; margin: 12px auto 0; box-shadow: 0 0 12px rgba(0, 255, 136, 0.6); }
+    .subtitle { text-align: center; color: #6b6b7b; font-size: 14px; margin-bottom: 36px; }
+    h2 { font-size: 20px; color: #ffffff; margin-top: 36px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #00ff88; border-radius: 2px; margin-right: 10px; vertical-align: middle; box-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    h3 { font-size: 16px; color: #e0e0e8; margin-top: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 12px; color: #b0b0be; }
+    .card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px; margin: 16px 0; transition: all 0.3s ease; }
+    .card:hover { background: rgba(0, 255, 136, 0.04); border-color: rgba(0, 255, 136, 0.15); box-shadow: 0 0 24px rgba(0, 255, 136, 0.06); }
+    .card h3 { margin-top: 0; }
+    .card p { margin-bottom: 4px; }
+    a { color: #00ff88; text-decoration: none; transition: all 0.3s ease; }
+    a:hover { color: #66ffb3; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    .faq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .faq-item:last-of-type { border-bottom: none; }
+    .faq-item h3 { color: #ffffff; margin-top: 0; }
+    .faq-item p { color: #b0b0be; }
+    ul { margin: 8px 0 16px 24px; color: #b0b0be; }
+    ul li { margin-bottom: 6px; }
+    ul li::marker { color: #00ff88; }
+    .contact-box { background: linear-gradient(135deg, rgba(0, 255, 136, 0.12) 0%, rgba(0, 212, 255, 0.12) 100%); border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 16px; padding: 28px; text-align: center; margin-top: 36px; box-shadow: 0 0 40px rgba(0, 255, 136, 0.08); transition: box-shadow 0.3s ease; }
+    .contact-box:hover { box-shadow: 0 0 60px rgba(0, 255, 136, 0.15); }
+    .contact-box h2 { color: #ffffff; border-bottom: none; margin-top: 0; margin-bottom: 12px; }
+    .contact-box h2::before { display: none; }
+    .contact-box p { color: rgba(200, 200, 212, 0.9); }
+    .contact-box a { color: #00ff88; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Technischer Support</h1>
+    <p class="subtitle">Tunery - Ihr professioneller Taschen-Stimmhelfer</p>
+
+    <h2>Kontakt</h2>
+    <p>Wenn Sie Probleme haben oder Vorschläge zur App haben, kontaktieren Sie uns bitte über den folgenden Kanal:</p>
+    <div class="card">
+      <h3>Technischer Support E-Mail</h3>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p style="margin-top: 8px; color: #6b6b7b; font-size: 14px;">Wir antworten in der Regel innerhalb von 1-3 Werktagen.</p>
+    </div>
+
+    <h2>Häufig gestellte Fragen</h2>
+
+    <div class="faq-item">
+      <h3>F1: Der Stimmer erkennt meinen Gitarrenklang nicht. Was soll ich tun?</h3>
+      <p>Bitte stellen Sie Folgendes sicher:</p>
+      <ul>
+        <li>Sie haben der App die Mikrofonberechtigung erteilt.</li>
+        <li>Die Umgebung ist relativ ruhig, um Hintergrundgeräusche zu minimieren.</li>
+        <li>Der Gitarrenklang ist klar genug. Versuchen Sie, näher am Mikrofon des Geräts zu spielen.</li>
+        <li>Keine andere App auf Ihrem Gerät verwendet derzeit das Mikrofon.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>F2: Die Stimmergebnisse scheinen ungenau zu sein. Was kann ich tun?</h3>
+      <p>Die App verwendet einen hochpräzisen Tonhöhenerkennungsalgorithmus und liefert im Allgemeinen genaue Stimmergebnisse. Wenn Sie eine starke Abweichung bemerken, versuchen Sie Folgendes:</p>
+      <ul>
+        <li>Verwenden Sie die App in einer ruhigen Umgebung.</li>
+        <li>Zupfen Sie jeweils nur eine Saite, vermeiden Sie gleichzeitiges Spielen mehrerer Saiten.</li>
+        <li>Überprüfen Sie, ob das Mikrofon Ihres Geräts ordnungsgemäß funktioniert.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>F3: Das Metronom hat keinen Ton oder der Ton ist abnormal?</h3>
+      <p>Bitte überprüfen Sie:</p>
+      <ul>
+        <li>Ist die Medienlautstärke Ihres Geräts eingeschaltet?</li>
+        <li>Befindet sich Ihr Gerät im Stummmodus?</li>
+        <li>Wenn Bluetooth-Kopfhörer angeschlossen sind, bestätigen Sie, dass das Audioausgabegerät richtig ausgewählt ist.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>F4: Die App stürzt ab oder friert ein. Was soll ich tun?</h3>
+      <p>Bitte versuchen Sie Folgendes:</p>
+      <ul>
+        <li>Schließen Sie die App und öffnen Sie sie erneut.</li>
+        <li>Prüfen Sie, ob ein App-Update verfügbar ist.</li>
+        <li>Starten Sie Ihr Gerät neu.</li>
+        <li>Wenn das Problem weiterhin besteht, senden Sie Ihr Gerätemodell, die Systemversion und eine Problembeschreibung an unsere technische Support-E-Mail.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>F5: Wie kann ich einen Fehler melden oder einen Vorschlag einreichen?</h3>
+      <p>Wir schätzen Ihr Feedback sehr. Sie können Fehlerberichte oder Verbesserungsvorschläge per E-Mail an <a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a> senden. Um Ihre Anfrage effizient bearbeiten zu können, fügen Sie bitte folgende Informationen bei:</p>
+      <ul>
+        <li>Ihr Gerätemodell und Betriebssystemversion</li>
+        <li>App-Versionsnummer (auf der Einstellungsseite verfügbar)</li>
+        <li>Eine detaillierte Beschreibung des Problems und Schritte zur Reproduktion</li>
+        <li>Screenshots oder Bildschirmaufnahmen, falls vorhanden</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h2>Benötigen Sie weitere Hilfe?</h2>
+      <p>Senden Sie eine E-Mail an</p>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistance technique - Tunery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      color: #c8c8d4;
+      background: linear-gradient(160deg, #0a0a0f 0%, #12121a 50%, #1a1a2e 100%);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; background: rgba(18, 18, 26, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    h1 { font-size: 28px; color: #ffffff; margin-bottom: 8px; text-align: center; }
+    h1::after { content: ''; display: block; width: 60px; height: 3px; background: #00ff88; border-radius: 2px; margin: 12px auto 0; box-shadow: 0 0 12px rgba(0, 255, 136, 0.6); }
+    .subtitle { text-align: center; color: #6b6b7b; font-size: 14px; margin-bottom: 36px; }
+    h2 { font-size: 20px; color: #ffffff; margin-top: 36px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #00ff88; border-radius: 2px; margin-right: 10px; vertical-align: middle; box-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    h3 { font-size: 16px; color: #e0e0e8; margin-top: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 12px; color: #b0b0be; }
+    .card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px; margin: 16px 0; transition: all 0.3s ease; }
+    .card:hover { background: rgba(0, 255, 136, 0.04); border-color: rgba(0, 255, 136, 0.15); box-shadow: 0 0 24px rgba(0, 255, 136, 0.06); }
+    .card h3 { margin-top: 0; }
+    .card p { margin-bottom: 4px; }
+    a { color: #00ff88; text-decoration: none; transition: all 0.3s ease; }
+    a:hover { color: #66ffb3; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    .faq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .faq-item:last-of-type { border-bottom: none; }
+    .faq-item h3 { color: #ffffff; margin-top: 0; }
+    .faq-item p { color: #b0b0be; }
+    ul { margin: 8px 0 16px 24px; color: #b0b0be; }
+    ul li { margin-bottom: 6px; }
+    ul li::marker { color: #00ff88; }
+    .contact-box { background: linear-gradient(135deg, rgba(0, 255, 136, 0.12) 0%, rgba(0, 212, 255, 0.12) 100%); border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 16px; padding: 28px; text-align: center; margin-top: 36px; box-shadow: 0 0 40px rgba(0, 255, 136, 0.08); transition: box-shadow 0.3s ease; }
+    .contact-box:hover { box-shadow: 0 0 60px rgba(0, 255, 136, 0.15); }
+    .contact-box h2 { color: #ffffff; border-bottom: none; margin-top: 0; margin-bottom: 12px; }
+    .contact-box h2::before { display: none; }
+    .contact-box p { color: rgba(200, 200, 212, 0.9); }
+    .contact-box a { color: #00ff88; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Assistance technique</h1>
+    <p class="subtitle">Tunery - Votre assistant d'accordage professionnel de poche</p>
+
+    <h2>Contactez-nous</h2>
+    <p>Si vous rencontrez des problèmes ou avez des suggestions concernant l'Application, n'hésitez pas à nous contacter via le canal suivant :</p>
+    <div class="card">
+      <h3>E-mail d'assistance technique</h3>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p style="margin-top: 8px; color: #6b6b7b; font-size: 14px;">Nous répondons généralement sous 1 à 3 jours ouvrables.</p>
+    </div>
+
+    <h2>Foire aux questions</h2>
+
+    <div class="faq-item">
+      <h3>Q1 : L'accordeur ne détecte pas le son de ma guitare. Que dois-je faire ?</h3>
+      <p>Veuillez vous assurer :</p>
+      <ul>
+        <li>Vous avez accordé l'autorisation du microphone à l'Application.</li>
+        <li>L'environnement est relativement calme, minimisant les bruits de fond.</li>
+        <li>Le son de la guitare est suffisamment clair. Essayez de jouer plus près du microphone de l'appareil.</li>
+        <li>Aucune autre application sur votre appareil n'utilise actuellement le microphone.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q2 : Les résultats d'accordage semblent imprécis. Que puis-je faire ?</h3>
+      <p>L'Application utilise un algorithme de détection de hauteur de haute précision et fournit généralement des résultats d'accordage précis. Si vous constatez un écart important, essayez :</p>
+      <ul>
+        <li>Utiliser l'Application dans un environnement calme.</li>
+        <li>Pincer une corde à la fois, en évitant de jouer plusieurs cordes simultanément.</li>
+        <li>Vérifier que le microphone de votre appareil fonctionne correctement.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q3 : Le métronome n'émet aucun son ou le son est anormal ?</h3>
+      <p>Veuillez vérifier :</p>
+      <ul>
+        <li>Si le volume multimédia de votre appareil est activé.</li>
+        <li>Si votre appareil est en mode silencieux.</li>
+        <li>Si des écouteurs Bluetooth sont connectés, confirmez que le périphérique de sortie audio est correctement sélectionné.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q4 : L'Application plante ou se fige. Que dois-je faire ?</h3>
+      <p>Veuillez essayer ce qui suit :</p>
+      <ul>
+        <li>Fermez l'Application et rouvrez-la.</li>
+        <li>Vérifiez si une mise à jour de l'Application est disponible.</li>
+        <li>Redémarrez votre appareil.</li>
+        <li>Si le problème persiste, envoyez votre modèle d'appareil, la version du système et une description du problème à notre e-mail d'assistance technique.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q5 : Comment signaler un bug ou soumettre une suggestion ?</h3>
+      <p>Nous apprécions grandement vos retours. Vous pouvez envoyer des rapports de bugs ou des suggestions d'amélioration par e-mail à <a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a>. Pour nous aider à traiter votre demande plus efficacement, veuillez inclure :</p>
+      <ul>
+        <li>Votre modèle d'appareil et la version du système d'exploitation</li>
+        <li>Le numéro de version de l'Application (disponible sur la page des paramètres)</li>
+        <li>Une description détaillée du problème et les étapes pour le reproduire</li>
+        <li>Des captures d'écran ou enregistrements d'écran, si possible</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h2>Besoin d'aide supplémentaire ?</h2>
+      <p>Veuillez envoyer un e-mail à</p>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p>Nous vous répondrons dans les plus brefs délais.</p>
+    </div>
+  </div>
+</body>
+</html>

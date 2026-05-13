@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기술 지원 - Tunery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.8;
+      color: #c8c8d4;
+      background: linear-gradient(160deg, #0a0a0f 0%, #12121a 50%, #1a1a2e 100%);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; background: rgba(18, 18, 26, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; padding: 40px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    h1 { font-size: 28px; color: #ffffff; margin-bottom: 8px; text-align: center; }
+    h1::after { content: ''; display: block; width: 60px; height: 3px; background: #00ff88; border-radius: 2px; margin: 12px auto 0; box-shadow: 0 0 12px rgba(0, 255, 136, 0.6); }
+    .subtitle { text-align: center; color: #6b6b7b; font-size: 14px; margin-bottom: 36px; }
+    h2 { font-size: 20px; color: #ffffff; margin-top: 36px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #00ff88; border-radius: 2px; margin-right: 10px; vertical-align: middle; box-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    h3 { font-size: 16px; color: #e0e0e8; margin-top: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 12px; color: #b0b0be; }
+    .card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px; margin: 16px 0; transition: all 0.3s ease; }
+    .card:hover { background: rgba(0, 255, 136, 0.04); border-color: rgba(0, 255, 136, 0.15); box-shadow: 0 0 24px rgba(0, 255, 136, 0.06); }
+    .card h3 { margin-top: 0; }
+    .card p { margin-bottom: 4px; }
+    a { color: #00ff88; text-decoration: none; transition: all 0.3s ease; }
+    a:hover { color: #66ffb3; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    .faq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .faq-item:last-of-type { border-bottom: none; }
+    .faq-item h3 { color: #ffffff; margin-top: 0; }
+    .faq-item p { color: #b0b0be; }
+    ul { margin: 8px 0 16px 24px; color: #b0b0be; }
+    ul li { margin-bottom: 6px; }
+    ul li::marker { color: #00ff88; }
+    .contact-box { background: linear-gradient(135deg, rgba(0, 255, 136, 0.12) 0%, rgba(0, 212, 255, 0.12) 100%); border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 16px; padding: 28px; text-align: center; margin-top: 36px; box-shadow: 0 0 40px rgba(0, 255, 136, 0.08); transition: box-shadow 0.3s ease; }
+    .contact-box:hover { box-shadow: 0 0 60px rgba(0, 255, 136, 0.15); }
+    .contact-box h2 { color: #ffffff; border-bottom: none; margin-top: 0; margin-bottom: 12px; }
+    .contact-box h2::before { display: none; }
+    .contact-box p { color: rgba(200, 200, 212, 0.9); }
+    .contact-box a { color: #00ff88; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>기술 지원</h1>
+    <p class="subtitle">Tunery - 당신의 주머니 속 프로페셔널 튜닝 도구</p>
+
+    <h2>문의하기</h2>
+    <p>앱 사용 중 문제가 발생하거나 제안 사항이 있으시면 다음 채널을 통해 연락해 주세요:</p>
+    <div class="card">
+      <h3>기술 지원 이메일</h3>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p style="margin-top: 8px; color: #6b6b7b; font-size: 14px;">일반적으로 1-3 영업일 이내에 답변드립니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <h3>Q1: 튜너가 기타 소리를 감지하지 못합니다. 어떻게 해야 하나요?</h3>
+      <p>다음을 확인해 주세요:</p>
+      <ul>
+        <li>앱에 마이크 권한이 부여되었는지 확인하세요.</li>
+        <li>주변 환경이 비교적 조용하고 배경 소음이 적은지 확인하세요.</li>
+        <li>기타 연주 소리가 충분히 명확한지 확인하고, 기기 마이크에 가까이 대고 연주해 보세요.</li>
+        <li>다른 앱이 마이크를 사용 중이지 않은지 확인하세요.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q2: 튜닝 결과가 부정확합니다. 어떻게 해야 하나요?</h3>
+      <p>이 앱은 고정밀 피치 감지 알고리즘을 사용하며 일반적으로 정확한 튜닝 결과를 제공합니다. 큰 차이가 느껴진다면 다음을 시도해 보세요:</p>
+      <ul>
+        <li>조용한 환경에서 사용하세요.</li>
+        <li>한 번에 한 줄씩만 튕기고, 여러 줄을 동시에 튕기지 마세요.</li>
+        <li>기기 마이크가 정상적으로 작동하는지 확인하세요.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q3: 메트로놈 소리가 나지 않거나 비정상적입니다.</h3>
+      <p>다음을 확인해 주세요:</p>
+      <ul>
+        <li>기기의 미디어 볼륨이 켜져 있는지 확인하세요.</li>
+        <li>기기가 무음 모드인지 확인하세요.</li>
+        <li>Bluetooth 이어폰에 연결된 경우 오디오 출력 장치가 올바르게 선택되었는지 확인하세요.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q4: 앱이 충돌하거나 멈춥니다.</h3>
+      <p>다음을 시도해 보세요:</p>
+      <ul>
+        <li>앱을 닫고 다시 열어보세요.</li>
+        <li>앱 업데이트가 있는지 확인하세요.</li>
+        <li>기기를 다시 시작하세요.</li>
+        <li>문제가 지속되면 기기 모델, 시스템 버전, 문제 설명을 기술 지원 이메일로 보내주세요.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q5: 버그를 신고하거나 제안을 제출하려면 어떻게 해야 하나요?</h3>
+      <p>여러분의 피드백을 소중히 생각합니다. 기술 지원 이메일 <a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a>로 버그 신고나 개선 제안을 보내주세요. 효율적인 처리를 위해 다음 정보를 포함해 주세요:</p>
+      <ul>
+        <li>기기 모델 및 운영 체제 버전</li>
+        <li>앱 버전 번호(설정 페이지에서 확인 가능)</li>
+        <li>문제에 대한 자세한 설명 및 재현 단계</li>
+        <li>가능한 경우 스크린샷 또는 화면 녹화</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h2>추가 도움이 필요하신가요?</h2>
+      <p>이메일을 보내주세요</p>
+      <p><a href="mailto:ssyu8950210@163.com">ssyu8950210@163.com</a></p>
+      <p>최대한 빨리 답변드리겠습니다.</p>
+    </div>
+  </div>
+</body>
+</html>
