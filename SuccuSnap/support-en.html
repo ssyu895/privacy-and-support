@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Support - succuSnap</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(160deg, #f0fdf4 0%, #ecfccb 50%, #fef9c3 100%);
+      min-height: 100vh;
+      color: #1f2937;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 400px; height: 400px;
+      background: linear-gradient(135deg, rgba(34,197,94,0.35) 0%, rgba(16,185,129,0.25) 100%);
+      top: -100px; right: -100px;
+    }
+    .orb-2 {
+      width: 320px; height: 320px;
+      background: linear-gradient(135deg, rgba(251,191,36,0.3) 0%, rgba(245,158,11,0.2) 100%);
+      bottom: 10%; left: -120px;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .navbar {
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid rgba(34,197,94,0.12);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+    .navbar-title {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.85);
+      box-shadow: 0 8px 32px rgba(34,197,94,0.08), 0 4px 12px rgba(0,0,0,0.04);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+    .card:first-of-type {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    .card:nth-of-type(2) {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both 80ms;
+    }
+    .card:nth-of-type(3) {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both 160ms;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(34,197,94,0.1);
+    }
+    .card-icon {
+      width: 22px; height: 22px;
+      flex-shrink: 0;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .card-body {
+      font-size: 15px;
+      color: #4b5563;
+    }
+    .card-body p {
+      margin-bottom: 12px;
+    }
+    .card-body p:last-child {
+      margin-bottom: 0;
+    }
+    .card-body strong {
+      color: #1f2937;
+      font-weight: 600;
+    }
+    .card-body ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .card-body ul li {
+      margin-bottom: 10px;
+    }
+    .card-body ul li:last-child {
+      margin-bottom: 0;
+    }
+    .faq-question {
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+    .faq-answer {
+      color: #6b7280;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+    .faq-answer:last-child {
+      margin-bottom: 0;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+    .contact-dot {
+      color: #22c55e;
+      font-size: 18px;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0 10px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="navbar">
+    <div class="navbar-title">succuSnap</div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <span class="card-title">Help & Support</span>
+      </div>
+      <div class="card-body">
+        <p>Welcome to succuSnap! Here you'll find frequently asked questions and contact information to help you get the most out of the App.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+        </svg>
+        <span class="card-title">FAQ</span>
+      </div>
+      <div class="card-body">
+        <div class="faq-question">Q: How do I add a new plant?</div>
+        <div class="faq-answer">Tap the "+" button at the bottom right of the Home page. Fill in the plant name, upload a photo, set the purchase price and date, then save.</div>
+
+        <div class="faq-question">Q: How do I record my plant's growth changes?</div>
+        <div class="faq-answer">Go to the plant's detail page and tap the "+" button at the bottom right. You can take a photo, select care actions (water, fertilize, etc.), and add notes.</div>
+
+        <div class="faq-question">Q: How do I compare before and after photos?</div>
+        <div class="faq-answer">On the plant's timeline page, tap the "Compare" button at the bottom, select 2-6 photos to generate a comparison collage. The comparison image can be saved to your album.</div>
+
+        <div class="faq-question">Q: How do I mark a plant as deceased/sold/given away?</div>
+        <div class="faq-answer">Tap the "Memorial" option in the top-right menu on the plant detail page and select the appropriate status. The plant will be moved to the "Memorial" page.</div>
+
+        <div class="faq-question">Q: Will my data be lost?</div>
+        <div class="faq-answer">All data is stored locally on your device. Uninstalling the app or clearing data will result in data loss. Please back up your device data regularly.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="card-title">Contact Us</span>
+      </div>
+      <div class="card-body">
+        <p>If you encounter any issues or have suggestions, feel free to contact us at:</p>
+        <div class="contact-item">
+          <span class="contact-dot">•</span>
+          <span>Email: ssyu8950210@163.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>succuSnap &mdash; Document your plants' growth story</p>
+    </div>
+  </div>
+</body>
+</html>

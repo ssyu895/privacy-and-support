@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>技术支持 - 多肉印记</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(160deg, #f0fdf4 0%, #ecfccb 50%, #fef9c3 100%);
+      min-height: 100vh;
+      color: #1f2937;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 400px; height: 400px;
+      background: linear-gradient(135deg, rgba(34,197,94,0.35) 0%, rgba(16,185,129,0.25) 100%);
+      top: -100px; right: -100px;
+    }
+    .orb-2 {
+      width: 320px; height: 320px;
+      background: linear-gradient(135deg, rgba(251,191,36,0.3) 0%, rgba(245,158,11,0.2) 100%);
+      bottom: 10%; left: -120px;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .navbar {
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid rgba(34,197,94,0.12);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+    .navbar-title {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.85);
+      box-shadow: 0 8px 32px rgba(34,197,94,0.08), 0 4px 12px rgba(0,0,0,0.04);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+    .card:first-of-type {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    .card:nth-of-type(2) {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both 80ms;
+    }
+    .card:nth-of-type(3) {
+      animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both 160ms;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(34,197,94,0.1);
+    }
+    .card-icon {
+      width: 22px; height: 22px;
+      flex-shrink: 0;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .card-body {
+      font-size: 15px;
+      color: #4b5563;
+    }
+    .card-body p {
+      margin-bottom: 12px;
+    }
+    .card-body p:last-child {
+      margin-bottom: 0;
+    }
+    .card-body strong {
+      color: #1f2937;
+      font-weight: 600;
+    }
+    .card-body ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .card-body ul li {
+      margin-bottom: 10px;
+    }
+    .card-body ul li:last-child {
+      margin-bottom: 0;
+    }
+    .faq-question {
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+    .faq-answer {
+      color: #6b7280;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+    .faq-answer:last-child {
+      margin-bottom: 0;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+    .contact-dot {
+      color: #22c55e;
+      font-size: 18px;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0 10px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="navbar">
+    <div class="navbar-title">多肉印记</div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <span class="card-title">帮助与支持</span>
+      </div>
+      <div class="card-body">
+        <p>欢迎使用多肉印记！这里汇总了常见问题和联系方式，帮助你更好地使用本应用。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+        </svg>
+        <span class="card-title">常见问题</span>
+      </div>
+      <div class="card-body">
+        <div class="faq-question">Q: 如何添加一棵新的植物？</div>
+        <div class="faq-answer">在首页点击右下角的"+"按钮，填写植物名称、上传照片、设置入手价格和日期后保存即可。</div>
+
+        <div class="faq-question">Q: 如何记录植物的生长变化？</div>
+        <div class="faq-answer">进入植物的详情页，点击右下角的"+"按钮即可添加一条新的记录，可以拍照、选择养护动作（浇水、施肥等）和添加备注。</div>
+
+        <div class="faq-question">Q: 如何对比植物的前后变化？</div>
+        <div class="faq-answer">在植物的成长记录页面，点击底部"对比"按钮，选择 2-6 张照片即可生成对比拼图。对比图可以保存到相册。</div>
+
+        <div class="faq-question">Q: 如何标记植物已死亡/出售/送人？</div>
+        <div class="faq-answer">在植物详情页的右上角菜单中选择"纪念"操作，可以选择相应状态。被标记的植物会移入"纪念"页面。</div>
+
+        <div class="faq-question">Q: 数据会丢失吗？</div>
+        <div class="faq-answer">所有数据仅保存在你的设备本地，卸载应用或清除数据会导致数据丢失，请谨慎操作。建议定期备份设备数据。</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="card-title">联系我们</span>
+      </div>
+      <div class="card-body">
+        <p>如果你遇到任何问题或有任何建议，欢迎通过以下方式联系我们：</p>
+        <div class="contact-item">
+          <span class="contact-dot">•</span>
+          <span>邮箱：ssyu8950210@163.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>多肉印记 &mdash; 记录多肉的成长故事</p>
+    </div>
+  </div>
+</body>
+</html>
