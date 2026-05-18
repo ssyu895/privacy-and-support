@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>隐私政策 - CaptionShot</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #17181A;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      color: #F5F5F7;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* 星空背景 */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image:
+        radial-gradient(circle 1.5px at 40px 120px, rgba(255,255,255,0.40), transparent),
+        radial-gradient(circle 2px at 420px 320px, rgba(255,255,255,0.28), transparent),
+        radial-gradient(circle 1px at 120px 630px, rgba(255,255,255,0.35), transparent),
+        radial-gradient(circle 2.8px at 670px 880px, rgba(232,237,255,0.22), transparent),
+        radial-gradient(circle 2.5px at 520px 620px, rgba(232,200,158,0.25), transparent),
+        radial-gradient(circle 2.2px at 320px 480px, rgba(123,167,212,0.32), transparent),
+        radial-gradient(circle 1.8px at 600px 180px, rgba(123,167,212,0.35), transparent),
+        radial-gradient(circle 2.5px at 150px 580px, rgba(123,167,212,0.28), transparent),
+        radial-gradient(circle 3px at 450px 250px, rgba(123,167,212,0.18), transparent);
+      background-repeat: no-repeat;
+      background-size: 750px 1200px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image:
+        radial-gradient(circle 2px at 380px 180px, rgba(232,200,158,0.25), transparent),
+        radial-gradient(circle 3.5px at 500px 750px, rgba(232,200,158,0.18), transparent),
+        radial-gradient(circle 3px at 620px 550px, rgba(123,167,212,0.22), transparent),
+        radial-gradient(circle 1.5px at 170px 820px, rgba(123,167,212,0.28), transparent),
+        radial-gradient(circle 2.8px at 460px 400px, rgba(123,167,212,0.18), transparent),
+        radial-gradient(circle 2px at 700px 200px, rgba(232,237,255,0.25), transparent);
+      background-repeat: no-repeat;
+      background-size: 750px 1200px;
+      pointer-events: none;
+      z-index: 0;
+      animation: twinkle 4.2s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.12; }
+      50% { opacity: 0.65; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* 头部光晕 */
+    .header-glow {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(123, 167, 212, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 0 48px;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 16px;
+      background: rgba(123, 167, 212, 0.10);
+      border: 1px solid rgba(123, 167, 212, 0.20);
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #7BA7D4;
+      border-radius: 50%;
+    }
+
+    .badge-text {
+      font-size: 13px;
+      color: #7BA7D4;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #F5F5F7;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: #8E8E93;
+    }
+
+    .card {
+      background: rgba(30, 31, 34, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(56, 56, 59, 0.5);
+      border-top: 1px solid rgba(123, 167, 212, 0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #E8EDFF;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(56, 56, 59, 0.5);
+    }
+
+    p {
+      font-size: 15px;
+      color: #C7C7CC;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #C7C7CC;
+      padding: 8px 0 8px 24px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #7BA7D4;
+      font-size: 10px;
+      top: 12px;
+    }
+
+    .highlight {
+      color: #7BA7D4;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 13px;
+      color: #636366;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 16px 60px; }
+      h1 { font-size: 26px; }
+      .card { padding: 24px 20px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-glow"></div>
+
+    <div class="header">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">CaptionShot</span>
+      </div>
+      <h1>隐私政策</h1>
+      <p class="last-updated">最后更新日期：2026 年 5 月 18 日</p>
+    </div>
+
+    <div class="card">
+      <h2>引言</h2>
+      <p>CaptionShot（以下简称"本应用"）尊重并保护您的隐私。本隐私政策旨在向您说明我们在您使用本应用时如何收集、使用和保护您的信息。</p>
+      <p>使用本应用即表示您同意本隐私政策中描述的做法。如果您不同意本政策的条款，请停止使用本应用。</p>
+    </div>
+
+    <div class="card">
+      <h2>1. 我们收集的信息</h2>
+      <p>本应用收集的信息非常有限，仅用于提供核心功能：</p>
+      <ul>
+        <li><strong>图片数据：</strong>您从相册中选择的截图图片仅在本地处理，用于生成带样机的 App Store 宣传图。我们<strong class="highlight">不会</strong>将您的图片上传到任何服务器。</li>
+        <li><strong>应用元数据：</strong>您输入的 App 名称、副标题、描述等信息存储在设备本地。使用在线翻译功能时，文本内容会使用 AI 翻译服务进行在线翻译，但<strong class="highlight">不会</strong>被我们收集或存储。</li>
+        <li><strong>使用数据：</strong>本应用<strong class="highlight">不</strong>收集任何分析数据、崩溃报告或使用统计信息。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>2. 信息的使用</h2>
+      <p>我们收集的信息仅用于以下目的：</p>
+      <ul>
+        <li>在设备本地处理您的截图，生成宣传图片</li>
+        <li>根据您的选择，将文本发送到在线翻译服务进行翻译</li>
+        <li>改善应用的用户体验和功能</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. 数据的存储和保护</h2>
+      <ul>
+        <li>所有图片和元数据<strong class="highlight">仅存储在您的设备本地</strong>，不会上传到我们的服务器。</li>
+        <li>应用使用 iOS 系统提供的安全存储机制来保存您的数据。</li>
+        <li>我们采用行业标准的安全措施保护您的信息免受未授权访问。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. 第三方服务</h2>
+      <p>本应用在在线翻译模式下会调用以下第三方服务：</p>
+      <ul>
+        <li><strong>在线翻译服务：</strong>用于在线翻译功能。您的文本内容会被发送到第三方翻译服务的服务器进行处理。</li>
+      </ul>
+      <p>离线翻译模式下，所有处理均在设备本地完成，<strong class="highlight">无需联网</strong>，不会发送任何数据到外部服务。</p>
+    </div>
+
+    <div class="card">
+      <h2>5. 数据共享</h2>
+      <p>我们<strong class="highlight">不会</strong>与任何第三方共享您的个人信息，除非：</p>
+      <ul>
+        <li>获得您的明确同意</li>
+        <li>法律要求</li>
+        <li>保护我们的权利或财产安全</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. 您的权利</h2>
+      <p>您对您的数据拥有完全控制权：</p>
+      <ul>
+        <li>您可以随时删除应用中的所有图片和元数据</li>
+        <li>您可以选择使用离线翻译，完全避免数据外传</li>
+        <li>卸载应用将清除所有本地存储的数据</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>7. 隐私政策的变更</h2>
+      <p>我们可能会不时更新本隐私政策。重大变更时，我们会在应用内通知您。建议您定期查看本页面以了解最新信息。</p>
+    </div>
+
+    <div class="card">
+      <h2>8. 联系我们</h2>
+      <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+      <ul>
+        <li>电子邮件：<a href="mailto:ssyu8950210@163.com" style="color:#7BA7D4;text-decoration:none;">ssyu8950210@163.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 CaptionShot. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
