@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기술 지원 — YesBoss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      background: #1a1a1a;
+      color: #e0d5c1;
+      font-family: -apple-system, "Noto Sans KR", "Malgun Gothic", sans-serif;
+      -webkit-font-smoothing: none;
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 4px solid #333;
+      margin-bottom: 2rem;
+    }
+    .header h1 {
+      font-family: "Press Start 2P", monospace;
+      font-size: 1.2rem;
+      color: #fbbf24;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 0 #000;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+    .header .sub {
+      font-size: 0.9rem;
+      color: #a09880;
+    }
+    .card {
+      background: #1f1f1f;
+      border: 4px solid #333;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 6px 6px 0 #000;
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #333;
+    }
+    .card p {
+      margin-bottom: 0.8rem;
+      color: #d0c8b0;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      position: relative;
+      color: #c0b090;
+    }
+    .card ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+      font-size: 0.7rem;
+    }
+    .card .highlight {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .card .email {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(251, 191, 36, 0.08);
+      border: 2px solid rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      word-break: break-all;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 4px solid #333;
+      margin-top: auto;
+      color: #706050;
+      font-size: 0.75rem;
+    }
+    .footer a {
+      color: #a09880;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fbbf24;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 1rem; }
+      .header h1 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>YESBOSS</h1>
+      <div class="sub">기술 지원</div>
+    </div>
+
+    <div class="card">
+      <h2>문의하기</h2>
+      <p>게임 플레이 중 문제가 발생하거나 제안이나 피드백이 있으시면 다음 연락처로 알려주세요.</p>
+      <div class="email">📧 ssyu8950210@163.com</div>
+    </div>
+
+    <div class="card">
+      <h2>자주 묻는 질문</h2>
+      <ul>
+        <li><span class="highlight">게임이 실행되지 않아요.</span> 기기를 최신 버전으로 업데이트하고 앱을 다시 시작해보세요.</li>
+        <li><span class="highlight">게임 진행이 사라졌어요.</span> 이 게임은 로컬 스토리지를 사용하여 데이터를 저장합니다. 앱 데이터를 지우지 마세요.</li>
+        <li><span class="highlight">화면 표시가 이상해요.</span> 기기를 최신 버전으로 업데이트해주세요. 화면 너비 375px 이상을 권장합니다.</li>
+        <li><span class="highlight">기능 제안이 있어요.</span> 이메일로 알려주세요. 모든 피드백을 진지하게 검토합니다.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>게임 정보</h2>
+      <p>YesBoss는 턴제 스타트업 시뮬레이션 게임입니다. 플레이어는 창업가가 되어 20턴 동안 다양한 결정을 내리고, 자원을 관리하며, 무작위 이벤트에 대응하여 회사를 성공으로 이끌어야 합니다.</p>
+      <p>버전: 1.0.0</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 YesBoss</p>
+    </div>
+  </div>
+</body>
+</html>

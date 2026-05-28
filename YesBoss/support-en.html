@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Support — YesBoss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      background: #1a1a1a;
+      color: #e0d5c1;
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: none;
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 4px solid #333;
+      margin-bottom: 2rem;
+    }
+    .header h1 {
+      font-family: "Press Start 2P", monospace;
+      font-size: 1.2rem;
+      color: #fbbf24;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 0 #000;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+    .header .sub {
+      font-size: 0.9rem;
+      color: #a09880;
+    }
+    .card {
+      background: #1f1f1f;
+      border: 4px solid #333;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 6px 6px 0 #000;
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #333;
+    }
+    .card p {
+      margin-bottom: 0.8rem;
+      color: #d0c8b0;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      position: relative;
+      color: #c0b090;
+    }
+    .card ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+      font-size: 0.7rem;
+    }
+    .card .highlight {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .card .email {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(251, 191, 36, 0.08);
+      border: 2px solid rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      word-break: break-all;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 4px solid #333;
+      margin-top: auto;
+      color: #706050;
+      font-size: 0.75rem;
+    }
+    .footer a {
+      color: #a09880;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fbbf24;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 1rem; }
+      .header h1 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>YESBOSS</h1>
+      <div class="sub">Technical Support</div>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>If you encounter any issues while playing, or have suggestions or feedback, please contact us via:</p>
+      <div class="email">📧 ssyu8950210@163.com</div>
+    </div>
+
+    <div class="card">
+      <h2>FAQ</h2>
+      <ul>
+        <li><span class="highlight">Game won't start?</span> Make sure your device is up to date. Try restarting the app.</li>
+        <li><span class="highlight">Progress lost?</span> This game uses local storage to save data. Do not clear app data.</li>
+        <li><span class="highlight">Display issues?</span> Make sure your device is up to date. Minimum screen width 375px recommended.</li>
+        <li><span class="highlight">Feature suggestions?</span> Send us an email! We carefully consider every piece of feedback.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>About the Game</h2>
+      <p>YesBoss is a turn-based startup simulation game. You play as an entrepreneur making strategic decisions over 20 turns, managing resources, and responding to random events to build a successful company.</p>
+      <p>Version: 1.0.0</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 YesBoss</p>
+    </div>
+  </div>
+</body>
+</html>

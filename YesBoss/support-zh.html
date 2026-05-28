@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术支持 — 老板英明</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Zpix';
+      src: url('fusion-pixel-sc.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      background: #1a1a1a;
+      color: #e0d5c1;
+      font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+      -webkit-font-smoothing: none;
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Pixel border pattern */
+    .pixel-border {
+      border: 4px solid #333;
+      box-shadow:
+        0 0 0 2px #fbbf24,
+        inset 0 0 0 2px #333;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 4px solid #333;
+      margin-bottom: 2rem;
+    }
+    .header h1 {
+      font-family: "Press Start 2P", "Zpix", monospace;
+      font-size: 1.5rem;
+      color: #fbbf24;
+      letter-spacing: 2px;
+      text-shadow:
+        3px 3px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+    .header .sub {
+      font-size: 0.9rem;
+      color: #a09880;
+    }
+
+    /* Language switcher */
+    /* Content cards */
+    .card {
+      background: #1f1f1f;
+      border: 4px solid #333;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 6px 6px 0 #000;
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #333;
+    }
+    .card p {
+      margin-bottom: 0.8rem;
+      color: #d0c8b0;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      position: relative;
+      color: #c0b090;
+    }
+    .card ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+      font-size: 0.7rem;
+    }
+    .card .highlight {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .card .email {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(251, 191, 36, 0.08);
+      border: 2px solid rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 4px solid #333;
+      margin-top: auto;
+      color: #706050;
+      font-size: 0.75rem;
+    }
+    .footer a {
+      color: #a09880;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fbbf24;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 1rem; }
+      .header h1 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>老板英明</h1>
+      <div class="sub">技术支持</div>
+    </div>
+
+    <div class="card">
+      <h2>联系我们</h2>
+      <p>如果您在游玩过程中遇到任何问题，或有任何建议和反馈，请通过以下方式联系我们：</p>
+      <div class="email">📧 ssyu8950210@163.com</div>
+    </div>
+
+    <div class="card">
+      <h2>常见问题</h2>
+      <ul>
+        <li><span class="highlight">游戏无法启动？</span> 请确保设备系统为最新版本，并尝试重启应用。</li>
+        <li><span class="highlight">游戏进度丢失？</span> 本游戏使用本地存储保存数据，请勿清除应用数据。</li>
+        <li><span class="highlight">界面显示异常？</span> 请确保设备系统为最新版本，建议屏幕宽度 375px 以上。</li>
+        <li><span class="highlight">有功能建议？</span> 欢迎发送邮件告知我们，我们会认真考虑每一条反馈。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>游戏信息</h2>
+      <p>《老板英明》是一款回合制创业模拟游戏。您将扮演一位创业者，在 20 个回合内做出各种决策，管理资源，应对随机事件，最终实现创业成功。</p>
+      <p>当前版本：1.0.0</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 老板英明</p>
+    </div>
+  </div>
+</body>
+</html>
