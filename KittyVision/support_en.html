@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Technical Support - KittyVision: Smart TV for Cats</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, #FFF5F9 0%, #F8F0FF 50%, #FFF5F9 100%);
+      color: #5D4E6D;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+    .header-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      margin: 0 auto 20px;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header p {
+      font-size: 14px;
+      color: #9B8EB0;
+      margin-top: 8px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(157, 134, 188, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #5D4E6D;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F0E8FF;
+    }
+    .card h2:first-of-type { margin-top: 0; }
+    .card p {
+      font-size: 15px;
+      color: #5D4E6D;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .card ul li {
+      font-size: 15px;
+      color: #5D4E6D;
+      margin-bottom: 6px;
+      list-style: none;
+      position: relative;
+      padding-left: 16px;
+    }
+    .card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF8FAB;
+    }
+    .faq-item {
+      background: linear-gradient(135deg, #FFF5F9, #FFF);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 143, 171, 0.1);
+    }
+    .faq-item .q {
+      font-weight: 700;
+      color: #FF8FAB;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .faq-item .a {
+      font-size: 14px;
+      color: #5D4E6D;
+    }
+    .contact-box {
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .contact-box p {
+      color: #FFF;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .contact-box .email {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 9999px;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-box .email:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .footer {
+      text-align: center;
+      padding: 32px 0 0;
+      font-size: 13px;
+      color: #C4B8D4;
+    }
+    .footer-line {
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #FF8FAB, #B8A9E8);
+      margin: 0 auto 12px;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 40px; }
+      .card { padding: 24px 20px; }
+      .header h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-dot"></div>
+      <h1>KittyVision Technical Support</h1>
+      <p>Thank you for using KittyVision - Smart TV for Cats</p>
+    </div>
+
+    <div class="card">
+      <h2>Quick Start Guide</h2>
+      <p>Getting started with KittyVision is easy:</p>
+      <ul>
+        <li>Open the App and pick a scene your cat will love (Butterflies, Fish, Birds, Mouse, or Bugs)</li>
+        <li>Place your device in front of your cat and let them watch and tap the screen</li>
+        <li>Sound effects provide feedback when your cat catches something, encouraging interaction</li>
+        <li>Tap the back button (top-left) to view your cat's catch results</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <span class="q">Q: My cat isn't interested in the screen. What can I do?</span>
+        <span class="a">Try switching to a different scene—every cat has its preference! Some love butterflies, while others prefer fish or birds. You can also turn up the volume, as sound effects often help grab your cat's attention.</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: Why is there no sound?</span>
+        <span class="a">Please check if your device is in silent mode, and make sure the volume is turned up in the App's settings. KittyVision's volume is independent from the system volume and needs to be adjusted within the App.</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: Does the App require an internet connection?</span>
+        <span class="a">No. KittyVision runs completely offline. No internet connection is needed. All content is built into the App.</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: Does the App collect my personal data?</span>
+        <span class="a">No. KittyVision is fully offline and does not collect any personal information. No ads, no tracking. Please see our Privacy Policy for details.</span>
+      </div>
+
+      <h2>Contact Us</h2>
+      <p>If your issue is not addressed above, please reach out to us and we'll get back to you as soon as possible:</p>
+
+      <div class="contact-box">
+        <p>Send an email to</p>
+        <span class="email">ssyu8950210@163.com</span>
+        <p style="margin-top:12px;font-size:13px;opacity:0.85;">We typically respond within 1-2 business days</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-line"></div>
+      <p>KittyVision - Smart TV for Cats</p>
+      <p>&copy; 2026 KittyVision. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

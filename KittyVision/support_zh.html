@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>技术支持 - KittyVision 猫咪的智能电视</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, sans-serif;
+      background: linear-gradient(180deg, #FFF5F9 0%, #F8F0FF 50%, #FFF5F9 100%);
+      color: #5D4E6D;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+    .header-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      margin: 0 auto 20px;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header p {
+      font-size: 14px;
+      color: #9B8EB0;
+      margin-top: 8px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(157, 134, 188, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #5D4E6D;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F0E8FF;
+    }
+    .card h2:first-of-type { margin-top: 0; }
+    .card p {
+      font-size: 15px;
+      color: #5D4E6D;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .card ul li {
+      font-size: 15px;
+      color: #5D4E6D;
+      margin-bottom: 6px;
+      list-style: none;
+      position: relative;
+      padding-left: 16px;
+    }
+    .card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF8FAB;
+    }
+    .faq-item {
+      background: linear-gradient(135deg, #FFF5F9, #FFF);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 143, 171, 0.1);
+    }
+    .faq-item .q {
+      font-weight: 700;
+      color: #FF8FAB;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .faq-item .a {
+      font-size: 14px;
+      color: #5D4E6D;
+    }
+    .contact-box {
+      background: linear-gradient(135deg, #FF8FAB, #B8A9E8);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .contact-box p {
+      color: #FFF;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .contact-box .email {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 9999px;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-box .email:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .footer {
+      text-align: center;
+      padding: 32px 0 0;
+      font-size: 13px;
+      color: #C4B8D4;
+    }
+    .footer-line {
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #FF8FAB, #B8A9E8);
+      margin: 0 auto 12px;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 40px; }
+      .card { padding: 24px 20px; }
+      .header h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-dot"></div>
+      <h1>KittyVision 技术支持</h1>
+      <p>感谢使用 KittyVision - 猫咪的智能电视</p>
+    </div>
+
+    <div class="card">
+      <h2>使用指南</h2>
+      <p>KittyVision 使用非常简单，只需几步即可让猫咪享受捕猎乐趣：</p>
+      <ul>
+        <li>打开应用后，选择猫咪感兴趣的场景（花丛蝴蝶、池塘小鱼、枝头小鸟、厨房老鼠、草丛小虫）</li>
+        <li>将设备放在猫咪面前，让它自由观看和拍打屏幕</li>
+        <li>猫咪拍到猎物时会有音效反馈，增加互动乐趣</li>
+        <li>点击左上角返回键可查看捕猎成果</li>
+      </ul>
+
+      <h2>常见问题</h2>
+
+      <div class="faq-item">
+        <span class="q">Q: 猫咪对画面不感兴趣怎么办？</span>
+        <span class="a">可以尝试切换不同场景，每只猫咪偏好不同——有的喜欢蝴蝶，有的更喜欢小鱼或小鸟。也可以调高音量，音效通常会吸引猫咪的注意力。</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: 为什么没有声音？</span>
+        <span class="a">请检查您的设备是否处于静音模式，以及在应用设置中的音量是否已调高。KittyVision 的音量独立于系统音量，需要在应用内调整。</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: 应用需要联网吗？</span>
+        <span class="a">不需要。KittyVision 完全离线运行，无需网络连接。所有内容都内置在应用中。</span>
+      </div>
+
+      <div class="faq-item">
+        <span class="q">Q: 会收集我的个人信息吗？</span>
+        <span class="a">不会。KittyVision 完全离线运行，不收集任何个人信息，无广告、无跟踪。详情请查看我们的隐私政策。</span>
+      </div>
+
+      <h2>联系我们</h2>
+      <p>如果以上信息未能解决您的问题，请通过以下方式联系我们，我们将尽快回复：</p>
+
+      <div class="contact-box">
+        <p>发送邮件至</p>
+        <span class="email">ssyu8950210@163.com</span>
+        <p style="margin-top:12px;font-size:13px;opacity:0.85;">我们通常会在 1-2 个工作日内回复</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-line"></div>
+      <p>KittyVision - 猫咪的智能电视</p>
+      <p>&copy; 2026 KittyVision. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
