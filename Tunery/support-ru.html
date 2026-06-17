@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Техническая поддержка - Tunery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      color: #c8c8d4;
+      background: linear-gradient(160deg, #0a0a0f 0%, #12121a 50%, #1a1a2e 100%);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(18, 18, 26, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #00ff88;
+      border-radius: 2px;
+      margin: 12px auto 0;
+      box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6b6b7b;
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #ffffff;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: #00ff88;
+      border-radius: 2px;
+      margin-right: 10px;
+      vertical-align: middle;
+      box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #e0e0e8;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #b0b0be;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 16px 0;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(0, 255, 136, 0.04);
+      border-color: rgba(0, 255, 136, 0.15);
+      box-shadow: 0 0 24px rgba(0, 255, 136, 0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: #00ff88;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #66ffb3;
+      text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+    }
+
+    .faq-item {
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    .faq-item p {
+      color: #b0b0be;
+    }
+
+    ul {
+      margin: 8px 0 16px 24px;
+      color: #b0b0be;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    ul li::marker {
+      color: #00ff88;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.12) 0%, rgba(0, 212, 255, 0.12) 100%);
+      border: 1px solid rgba(0, 255, 136, 0.2);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 36px;
+      box-shadow: 0 0 40px rgba(0, 255, 136, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-box:hover {
+      box-shadow: 0 0 60px rgba(0, 255, 136, 0.15);
+    }
+
+    .contact-box h2 {
+      color: #ffffff;
+      border-bottom: none;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .contact-box h2::before {
+      display: none;
+    }
+
+    .contact-box p {
+      color: rgba(200, 200, 212, 0.9);
+    }
+
+    .contact-box a {
+      color: #00ff88;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Техническая поддержка</h1>
+    <p class="subtitle">Tunery - Ваш профессиональный карманный тюнер</p>
+
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item">
+      <h3>Q1: Тюнер не может уловить звук моей гитары. Что мне делать?</h3>
+      <p>Пожалуйста, убедитесь:</p>
+      <ul>
+        <li>Что вы предоставили приложению разрешение на доступ к микрофону.</li>
+        <li>Что окружающая обстановка достаточно тихая, чтобы минимизировать фоновый шум.</li>
+        <li>Что звук гитары достаточно четкий. Попробуйте играть ближе к микрофону устройства.</li>
+        <li>Что никакое другое приложение на вашем устройстве в данный момент не использует микрофон.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q2: Результаты настройки кажутся неточными. Что можно сделать?</h3>
+      <p>Приложение использует высокоточный алгоритм определения высоты тона и обычно обеспечивает точные результаты. Если вы заметили значительное отклонение, попробуйте:</p>
+      <ul>
+        <li>Использовать приложение в тихой обстановке.</li>
+        <li>Защипывать по одной струне за раз, избегая одновременной игры на нескольких струнах.</li>
+        <li>Проверить, исправен ли микрофон вашего устройства.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q3: У метронома нет звука или звук необычный?</h3>
+      <p>Пожалуйста, проверьте:</p>
+      <ul>
+        <li>Достаточно ли высока громкость мультимедиа на вашем устройстве.</li>
+        <li>Не находится ли ваше устройство в беззвучном режиме.</li>
+        <li>Если вы подключены к Bluetooth-наушникам, убедитесь, что устройство вывода звука выбрано правильно.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q4: Приложение вылетает или зависает. Что мне делать?</h3>
+      <p>Пожалуйста, попробуйте следующее:</p>
+      <ul>
+        <li>Закройте приложение и откройте его снова.</li>
+        <li>Проверьте, доступно ли обновление приложения.</li>
+        <li>Перезагрузите ваше устройство.</li>
+        <li>Если проблема не устранена, отправьте модель вашего устройства, версию системы и описание проблемы на наш электронный адрес технической поддержки. Мы решим ее как можно скорее.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q5: Как я могу сообщить об ошибке или отправить предложение?</h3>
+      <p>Мы очень ценим ваши отзывы. Вы можете отправить отчеты об ошибках или предложения по улучшению на наш электронный адрес технической поддержки. Чтобы мы могли обработать ваш запрос более эффективно, пожалуйста, укажите:</p>
+      <ul>
+        <li>Модель вашего устройства и версию операционной системы</li>
+        <li>Номер версии приложения (доступен на странице настроек)</li>
+        <li>Подробное описание проблемы и шаги для ее воспроизведения</li>
+        <li>Скриншоты или запись экрана, если возможно</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h2>Нужна дополнительная помощь?</h2>
+      <p>Отправьте письмо на</p>
+      <p><span style="color:#00ff88;font-weight:bold">ssyu8950210@163.com</span></p>
+      <p>Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+  </div>
+</body>
+</html>
